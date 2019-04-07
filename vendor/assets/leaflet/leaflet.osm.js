@@ -2,8 +2,7 @@ L.OSM = {};
 
 L.OSM.TileLayer = L.TileLayer.extend({
   options: {
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
+    url: 'http://localhost/hot/{z}/{x}/{y}.png'
   },
 
   initialize: function (options) {
@@ -14,39 +13,36 @@ L.OSM.TileLayer = L.TileLayer.extend({
 
 L.OSM.Mapnik = L.OSM.TileLayer.extend({
   options: {
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    url: 'http://localhost/hot/{z}/{x}/{y}.png',
     maxZoom: 19
   }
 });
 
 L.OSM.CycleMap = L.OSM.TileLayer.extend({
   options: {
-    url: 'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}{r}.png?apikey={apikey}',
-    maxZoom: 21,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+    url: 'http://localhost/hot/{z}/{x}/{y}{r}.png?apikey={apikey}',
+    maxZoom: 21
   }
 });
 
 L.OSM.TransportMap = L.OSM.TileLayer.extend({
   options: {
-    url: 'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}{r}.png?apikey={apikey}',
-    maxZoom: 21,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+    url: 'http://localhost/hot/{z}/{x}/{y}{r}.png?apikey={apikey}',
+    maxZoom: 21
   }
 });
 
 L.OSM.HOT = L.OSM.TileLayer.extend({
   options: {
-    url: 'https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+    url: 'http://localhost/hot/{z}/{x}/{y}.png',
     maxZoom: 20,
-    subdomains: 'abc',
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors. Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+    subdomains: 'abc'
   }
 });
 
 L.OSM.GPS = L.OSM.TileLayer.extend({
   options: {
-    url: 'https://gps-{s}.tile.openstreetmap.org/lines/{z}/{x}/{y}.png',
+    url: 'http://localhost/hot/{z}/{x}/{y}.png',
     maxZoom: 21,
     maxNativeZoom: 20,
     subdomains: 'abc'

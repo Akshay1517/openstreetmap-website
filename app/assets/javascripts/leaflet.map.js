@@ -19,7 +19,6 @@ L.OSM.Map = L.Map.extend({
     this.baseLayers = [];
 
     this.baseLayers.push(new L.OSM.Mapnik({
-      attribution: copyright + " &hearts; " + donate,
       code: "M",
       keyid: "mapnik",
       name: I18n.t("javascripts.map.base.standard")
@@ -27,7 +26,6 @@ L.OSM.Map = L.Map.extend({
 
     if (OSM.THUNDERFOREST_KEY) {
       this.baseLayers.push(new L.OSM.CycleMap({
-        attribution: copyright + ". Tiles courtesy of <a href='https://www.thunderforest.com/' target='_blank'>Andy Allan</a>",
         apikey: OSM.THUNDERFOREST_KEY,
         code: "C",
         keyid: "cyclemap",
@@ -35,7 +33,6 @@ L.OSM.Map = L.Map.extend({
       }));
 
       this.baseLayers.push(new L.OSM.TransportMap({
-        attribution: copyright + ". Tiles courtesy of <a href='https://www.thunderforest.com/' target='_blank'>Andy Allan</a>",
         apikey: OSM.THUNDERFOREST_KEY,
         code: "T",
         keyid: "transportmap",
@@ -44,7 +41,6 @@ L.OSM.Map = L.Map.extend({
     }
 
     this.baseLayers.push(new L.OSM.HOT({
-      attribution: copyright + ". Tiles style by <a href='https://www.hotosm.org/' target='_blank'>Humanitarian OpenStreetMap Team</a>" + " hosted by <a href='https://openstreetmap.fr/' target='_blank'>OpenStreetMap France</a>",
       code: "H",
       keyid: "hot",
       name: I18n.t("javascripts.map.base.hot")

@@ -133,12 +133,6 @@ $(document).ready(function () {
     sidebar: sidebar
   }).addTo(map);
 
-  L.OSM.share({
-    position: position,
-    sidebar: sidebar,
-    short: true
-  }).addTo(map);
-
   L.OSM.note({
     position: position,
     sidebar: sidebar

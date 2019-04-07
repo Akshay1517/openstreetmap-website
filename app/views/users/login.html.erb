@@ -48,29 +48,7 @@
     <div id="loginForm" class="standard-form">
 
       <fieldset class='form-divider'>
-
-        <p class='standard-label'><%= t '.with external' %></p>
-
         <ul class='clearfix' id="login_auth_buttons">
-          <li><%= link_to image_tag("openid.png", :alt => t(".auth_providers.openid.title")), "#", :id => "openid_open_url", :title => t(".auth_providers.openid.title") %></li>
-          <% if defined?(GOOGLE_AUTH_ID) -%>
-          <li><%= auth_button "google", "google" %></li>
-          <% end -%>
-          <% if defined?(FACEBOOK_AUTH_ID) -%>
-          <li><%= auth_button "facebook", "facebook" %></li>
-          <% end -%>
-          <% if defined?(WINDOWSLIVE_AUTH_ID) -%>
-          <li><%= auth_button "windowslive", "windowslive" %></li>
-          <% end -%>
-          <% if defined?(GITHUB_AUTH_ID) -%>
-          <li><%= auth_button "github", "github" %></li>
-          <% end -%>
-          <% if defined?(WIKIPEDIA_AUTH_ID) -%>
-          <li><%= auth_button "wikipedia", "wikipedia" %></li>
-          <% end -%>
-          <li><%= auth_button "yahoo", "openid", :openid_url => "yahoo.com" %></li>
-          <li><%= auth_button "wordpress", "openid", :openid_url => "wordpress.com" %></li>
-          <li><%= auth_button "aol", "openid", :openid_url => "aol.com" %></li>
         </ul>
 
         <div id='login_openid_url' class='form-row'>
