@@ -134,6 +134,7 @@ module Api
         result = diff_reader.commit
         render :xml => result.to_s
       end
+	  %x( rm /home/openstreetmap/planet.osm && osmosis --read-apidb-current host="localhost" database="openstreetmap" user="openstreetmap" password="Test123" validateSchemaVersion="no" --write-xml file="/home/openstreetmap/planet.osm" && osm2pgsql -d gis --append --slim  -G --hstore --tag-transform-script /home/renderaccount/src/openstreetmap-carto/openstreetmap-carto.lua -C 2500 --number-processes 1 -S /home/renderaccount/src/openstreetmap-carto/openstreetmap-carto.style /home/openstreetmap/planet.osm && sudo rm -rf /var/lib/mod_tile/ajt/* && sudo service renderd restart)
     end
 
     ##
